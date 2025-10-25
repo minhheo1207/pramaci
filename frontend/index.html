@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PharmaX – Nhà thuốc trực tuyến</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container">
+        <div>
+          <strong>Giao trong 2h</strong> nội thành •
+          <strong>Freeship</strong> đơn từ 300k
+        </div>
+        <a href="#">Tra cứu đơn</a>
+      </div>
+    </div>
+
+    <!-- Header (mount by JS) -->
+    <header id="app-header" class="header"></header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <h1>Nhà thuốc trực tuyến đáng tin cậy</h1>
+          <p>
+            Mua thuốc, vitamin, chăm sóc sức khoẻ chính hãng. Tư vấn miễn phí
+            24/7.
+          </p>
+          <div class="cta">
+            <button class="btn" id="shopNow">Mua ngay</button>
+            <button class="btn ghost" id="focusSearch">Tìm sản phẩm</button>
+          </div>
+        </div>
+        <div>
+          <img
+            alt="hero"
+            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo strip -->
+    <section class="section">
+      <div class="container strip">
+        <div class="promo">🚚 Giao nhanh 2h nội thành</div>
+        <div class="promo">🔒 Hàng chính hãng</div>
+        <div class="promo">💳 Thanh toán linh hoạt</div>
+      </div>
+    </section>
+
+    <!-- Main layout -->
+    <main class="section">
+      <div class="container layout">
+        <aside class="sidebar">
+          <h3>Danh mục</h3>
+          <ul id="catList" class="cat-list"></ul>
+        </aside>
+        <section class="content">
+          <div class="content-head">
+            <h2 id="listTitle">Sản phẩm</h2>
+            <div class="tools">
+              <select id="sortSel" class="pill">
+                <option value="">Sắp xếp</option>
+                <option value="priceAsc">Giá ↑</option>
+                <option value="priceDesc">Giá ↓</option>
+                <option value="ratingDesc">Đánh giá ↓</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid cols-4" id="productGrid"></div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Store locator -->
+    <section class="section" id="stores">
+      <div class="container">
+        <h2>Hệ thống cửa hàng</h2>
+        <div class="cat between">
+          <div class="left">
+            <div class="icon">📍</div>
+            <div>
+              <div class="title">Tìm cửa hàng gần bạn</div>
+              <div class="muted">Hơn 500+ điểm bán trên toàn quốc</div>
+            </div>
+          </div>
+          <button class="btn ghost" id="openMap">Mở bản đồ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (mount by JS) -->
+    <footer id="app-footer" class="footer"></footer>
+
+    <!-- Cart Drawer (mount by JS) -->
+    <div id="cart-root"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
