@@ -1,0 +1,21 @@
+/* Trang Hàng mới */
+body.page-new .head h3 {
+  color: #0a4c49;
+}
+body.page-new .grid .card.product .badge {
+  background: #00a6a0;
+}
+body.page-new .grid .card.product {
+  border: 1px solid #e0f2f1;
+}
+body.page-new .tabs button {
+  background: #00a6a0;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+body.page-new .tabs button.active {
+  background: #00807b;
+}

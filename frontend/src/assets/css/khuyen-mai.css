@@ -1,0 +1,11 @@
+/* Chỉ các tinh chỉnh riêng cho trang Khuyến mãi
+   (trang dùng lại toàn bộ layout từ css/index.css) */
+body.page-sale .topbar {
+  background: #0b5c59;
+}
+body.page-sale .head h2::after {
+  content: " 🎉";
+}
+body.page-sale .grid .card.product {
+  border: 1px solid #d1fae5;
+}

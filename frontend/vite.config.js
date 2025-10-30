@@ -1,7 +1,10 @@
-import { defineConfig } from "vite";
-
-export default defineConfig({
+export default {
   server: {
-    proxy: { "/api": "http://localhost:3000" },
+    historyApiFallback: true,
   },
-});
+
+  plugins: [react()],
+  server: {
+    historyApiFallback: true, // ✨ rất quan trọng
+  },
+};

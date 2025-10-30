@@ -1,0 +1,7 @@
+/* Bài viết */
+body.page-blog .post .thumb {
+  background: linear-gradient(120deg, #e2f0ff, #e9f7ff);
+}
+body.page-blog .post:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}

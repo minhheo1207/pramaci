@@ -3,109 +3,499 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PharmaX – Nhà thuốc trực tuyến</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>PharmaCity (Demo) – Trang chủ</title>
+    <link rel="stylesheet" href="src/assets/css/index.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' rx='12' fill='%2300a6a0'/%3E%3Ctext x='50%25' y='58%25' font-size='42' font-family='Arial' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body>
-    <!-- Topbar -->
+  <body class="page-home">
+    <!-- TOPBAR -->
     <div class="topbar">
-      <div class="container">
-        <div>
-          <strong>Giao trong 2h</strong> nội thành •
-          <strong>Freeship</strong> đơn từ 300k
+      <div class="container wrap">
+        <div class="left">
+          <span class="chip">🚚 Miễn phí ship đơn từ 300K</span>
+          <a class="link" href="dich-vu.html">Hệ thống cửa hàng</a>
+          <a class="link" href="#">Tra cứu đơn hàng</a>
         </div>
-        <a href="#">Tra cứu đơn</a>
+        <div class="right">
+          <span>📞 Hotline: <strong>1800 0000</strong></span>
+          <a class="link" href="dich-vu.html">Hỗ trợ</a>
+        </div>
       </div>
     </div>
 
-    <!-- Header (mount by JS) -->
-    <header id="app-header" class="header"></header>
+    <!-- HEADER -->
+    <header>
+      <div class="container header-main">
+        <button class="hamb action" aria-label="Mở menu">☰</button>
+        <a class="brand" href="index.html">
+          <div class="logo">P</div>
+          <div class="name">PharmaCity</div>
+        </a>
+        <div class="actions" style="justify-self: end">
+          <a class="action" href="#">📍 <strong>Đà Nẵng</strong></a>
+          <a class="action" href="#">👤 Tài khoản</a>
+          <a class="action" href="#">🛒 Giỏ hàng <span class="pill">0</span></a>
+        </div>
+        <form class="search">
+          <input placeholder="Tìm thuốc, TPCN, thiết bị y tế..." />
+          <button type="button">Tìm</button>
+        </form>
+      </div>
+      <nav class="nav">
+        <div class="container wrap">
+          <a class="active" href="index.html">Trang chủ</a>
+          <a href="khuyen-mai.html">Khuyến mãi</a>
+          <a href="hang-moi.html">Hàng mới</a>
+          <a href="ban-chay.html">Bán chạy</a>
+          <a href="bai-viet.html">Bài viết</a>
+          <a href="dich-vu.html">Dịch vụ</a>
+        </div>
+      </nav>
+    </header>
 
-    <!-- Hero -->
+    <!-- HERO (đẹp, banner to) -->
     <section class="hero">
-      <div class="container wrap">
-        <div>
-          <h1>Nhà thuốc trực tuyến đáng tin cậy</h1>
-          <p>
-            Mua thuốc, vitamin, chăm sóc sức khoẻ chính hãng. Tư vấn miễn phí
-            24/7.
-          </p>
-          <div class="cta">
-            <button class="btn" id="shopNow">Mua ngay</button>
-            <button class="btn ghost" id="focusSearch">Tìm sản phẩm</button>
-          </div>
-        </div>
-        <div>
+      <div class="container hero-grid">
+        <div class="banner card" style="overflow: hidden; position: relative">
           <img
-            alt="hero"
-            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop"
+            alt="Hero Pharmacity"
+            style="width: 100%; height: auto; display: block"
+            src="data:image/svg+xml;utf8,
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 560'>
+            <defs>
+              <linearGradient id='g1' x1='0' x2='1'>
+                <stop offset='0' stop-color='%23E8FBFF'/>
+                <stop offset='1' stop-color='%23DFF5F4'/>
+              </linearGradient>
+              <linearGradient id='g2' x1='0' x2='1'>
+                <stop offset='0' stop-color='%2300A6A0'/>
+                <stop offset='1' stop-color='%2300827E'/>
+              </linearGradient>
+            </defs>
+            <rect width='1600' height='560' fill='url(%23g1)'/>
+            <circle cx='1400' cy='100' r='220' fill='url(%23g2)' opacity='0.15'/>
+            <circle cx='1240' cy='340' r='160' fill='url(%23g2)' opacity='0.12'/>
+            <g font-family='Arial,Segoe UI' fill='%23083f3c'>
+              <text x='120' y='210' font-size='54' font-weight='700'>Chăm sóc sức khỏe toàn diện</text>
+              <text x='120' y='270' font-size='24' opacity='0.85'>Thuốc chính hãng • Giao nhanh 2h • Dược sĩ tư vấn</text>
+            </g>
+            <g transform='translate(1080,140)'>
+              <rect x='0' y='0' width='420' height='280' rx='24' fill='white' opacity='0.9'/>
+              <rect x='22' y='22' width='376' height='120' rx='16' fill='%23F3FAFA'/>
+              <text x='210' y='90' text-anchor='middle' font-size='26' font-family='Arial' fill='%2300A6A0'>Pharmacy Online</text>
+              <rect x='22' y='160' width='120' height='30' rx='8' fill='%2300A6A0'/>
+              <rect x='152' y='160' width='120' height='30' rx='8' fill='%2300A6A0' opacity='0.7'/>
+              <rect x='282' y='160' width='116' height='30' rx='8' fill='%2300A6A0' opacity='0.5'/>
+              <text x='82' y='180' text-anchor='middle' font-size='14' fill='white'>Thuốc</text>
+              <text x='212' y='180' text-anchor='middle' font-size='14' fill='white'>TPCN</text>
+              <text x='340' y='180' text-anchor='middle' font-size='14' fill='white'>Thiết bị</text>
+            </g>
+          </svg>"
           />
-        </div>
-      </div>
-    </section>
-
-    <!-- Promo strip -->
-    <section class="section">
-      <div class="container strip">
-        <div class="promo">🚚 Giao nhanh 2h nội thành</div>
-        <div class="promo">🔒 Hàng chính hãng</div>
-        <div class="promo">💳 Thanh toán linh hoạt</div>
-      </div>
-    </section>
-
-    <!-- Main layout -->
-    <main class="section">
-      <div class="container layout">
-        <aside class="sidebar">
-          <h3>Danh mục</h3>
-          <ul id="catList" class="cat-list"></ul>
-        </aside>
-        <section class="content">
-          <div class="content-head">
-            <h2 id="listTitle">Sản phẩm</h2>
-            <div class="tools">
-              <select id="sortSel" class="pill">
-                <option value="">Sắp xếp</option>
-                <option value="priceAsc">Giá ↑</option>
-                <option value="priceDesc">Giá ↓</option>
-                <option value="ratingDesc">Đánh giá ↓</option>
-              </select>
-            </div>
-          </div>
-          <div class="grid cols-4" id="productGrid"></div>
-        </section>
-      </div>
-    </main>
-
-    <!-- Store locator -->
-    <section class="section" id="stores">
-      <div class="container">
-        <h2>Hệ thống cửa hàng</h2>
-        <div class="cat between">
-          <div class="left">
-            <div class="icon">📍</div>
+          <div
+            class="content"
+            style="
+              position: absolute;
+              inset: 0;
+              display: grid;
+              place-items: center;
+              text-align: center;
+              padding: 18px;
+            "
+          >
             <div>
-              <div class="title">Tìm cửa hàng gần bạn</div>
-              <div class="muted">Hơn 500+ điểm bán trên toàn quốc</div>
+              <span class="pill">Ưu đãi cuối tuần</span>
+              <h2>Giảm đến 50% – Mua 2 tặng 1</h2>
+              <p>
+                Sản phẩm vitamin, khoáng chất và thiết bị y tế. Áp dụng online.
+              </p>
+              <div
+                class="row"
+                style="
+                  display: flex;
+                  gap: 8px;
+                  justify-content: center;
+                  margin-top: 8px;
+                "
+              >
+                <a class="btn primary" href="khuyen-mai.html">Mua ngay</a>
+                <a class="btn ghost" href="khuyen-mai.html">Xem khuyến mãi</a>
+              </div>
             </div>
           </div>
-          <button class="btn ghost" id="openMap">Mở bản đồ</button>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini card">
+            <h4>Giao hàng 2h</h4>
+            <p>Nội thành</p>
+          </div>
+          <div class="mini card">
+            <h4>Dược sĩ tư vấn</h4>
+            <p>Miễn phí 8:00–22:00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container promos">
+        <div class="promo">
+          <div class="icon">💊</div>
+          <div>
+            <strong>Chính hãng</strong>
+            <div>Xuất xứ rõ ràng</div>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="icon">🛡️</div>
+          <div>
+            <strong>Bảo mật</strong>
+            <div>Thanh toán an toàn</div>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="icon">🚚</div>
+          <div>
+            <strong>Giao nhanh</strong>
+            <div>Freeship theo khu vực</div>
+          </div>
+        </div>
+        <div class="promo">
+          <div class="icon">🎁</div>
+          <div>
+            <strong>Ưu đãi</strong>
+            <div>Mã giảm giá mỗi tuần</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer (mount by JS) -->
-    <footer id="app-footer" class="footer"></footer>
+    <!-- SẢN PHẨM -->
+    <section class="container section">
+      <div class="head">
+        <h3>Ưu đãi hôm nay</h3>
+        <a href="khuyen-mai.html">Xem tất cả ›</a>
+      </div>
+      <div class="grid">
+        <!-- Card 1 -->
+        <div class="card product">
+          <div class="thumb">
+            <!-- Card 1 -->
+            <img
+              alt="Viên sủi Vitamin C 1000mg"
+              src="data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'>
+  <defs>
+    <linearGradient id='bg' x1='0' x2='1'>
+      <stop stop-color='%23F6FAFF'/><stop offset='1' stop-color='%23F2FFF9'/>
+    </linearGradient>
+    <linearGradient id='cap' x1='0' x2='0' y1='0' y2='1'>
+      <stop stop-color='%23EDEDED'/><stop offset='1' stop-color='%23D9D9D9'/>
+    </linearGradient>
+    <linearGradient id='tube' x1='0' x2='0' y1='0' y2='1'>
+      <stop stop-color='white'/><stop offset='1' stop-color='%23F7F7F7'/>
+    </linearGradient>
+    <linearGradient id='label' x1='0' x2='0' y1='0' y2='1'>
+      <stop stop-color='%23FFC94A'/><stop offset='1' stop-color='%23FFB84D'/>
+    </linearGradient>
+  </defs>
 
-    <!-- Cart Drawer (mount by JS) -->
-    <div id="cart-root"></div>
+  <!-- nền -->
+  <rect width='600' height='400' fill='url(%23bg)'/>
 
-    <script type="module" src="/src/main.js"></script>
+  <!-- ống viên sủi (đứng giữa) -->
+  <g transform='translate(260,40)'>
+    <!-- nắp -->
+    <rect x='22' y='8' width='56' height='22' rx='6' fill='url(%23cap)' stroke='%23CFCFCF'/>
+    <!-- thân ống -->
+    <rect x='20' y='30' width='60' height='260' rx='12' fill='url(%23tube)' stroke='%23E2E2E2'/>
+    <!-- nhãn vàng -->
+    <rect x='22' y='130' width='56' height='110' rx='8' fill='url(%23label)'/>
+    <!-- viền nhãn -->
+    <rect x='22' y='130' width='56' height='110' rx='8' fill='none' stroke='%23EAA62A'/>
+
+    <!-- chữ VITAMIN dọc -->
+    <g transform='translate(48,40) rotate(-90)'>
+      <text x='0' y='0' font-family='Arial' font-weight='700' font-size='16' fill='%23999'>VITAMIN</text>
+    </g>
+
+    <!-- chữ C+ trên nhãn -->
+    <circle cx='50' cy='168' r='16' fill='white' opacity='.95'/>
+    <text x='50' y='174' text-anchor='middle' font-family='Arial' font-weight='800' font-size='16' fill='%23FF8A00'>C+</text>
+
+    <!-- dòng 1000mg -->
+    <text x='50' y='210' text-anchor='middle' font-family='Arial' font-size='12' fill='white'>1000mg</text>
+
+    <!-- sóng bọt nhẹ -->
+    <circle cx='30' cy='70' r='3' fill='%23CCCCCC' opacity='.5'/>
+    <circle cx='40' cy='60' r='2.5' fill='%23CCCCCC' opacity='.4'/>
+    <circle cx='65' cy='68' r='2.5' fill='%23CCCCCC' opacity='.5'/>
+  </g>
+
+  <!-- chú thích dưới -->
+  <text x='300' y='360' text-anchor='middle' font-family='Arial' font-size='20' fill='%23333' font-weight='700'>
+    Viên sủi Vitamin C 1000mg
+  </text>
+</svg>"
+            />
+
+            <span class="badge">Giảm 20%</span>
+          </div>
+          <div class="body">
+            <h4 class="name">Vitamin C 1000mg</h4>
+            <div class="prices">
+              <strong class="price">69.000₫</strong
+              ><span class="old">99.000₫</span>
+            </div>
+            <a class="btn primary" href="#">Chọn sản phẩm</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card product">
+          <div class="thumb">
+            <!-- Card 2 -->
+            <img
+              alt="Omega-3 Fish Oil"
+              src="data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'>
+  <defs>
+    <linearGradient id='bg' x1='0' x2='1'>
+      <stop stop-color='%23E9F4FF'/><stop offset='1' stop-color='%23DFF2FF'/>
+    </linearGradient>
+    <linearGradient id='bottle' x1='0' x2='0' y1='0' y2='1'>
+      <stop stop-color='%23FFF9E6'/><stop offset='1' stop-color='%23FFE6A3'/>
+    </linearGradient>
+    <linearGradient id='cap' x1='0' x2='0' y1='0' y2='1'>
+      <stop stop-color='%2389B4F8'/><stop offset='1' stop-color='%236CA3F5'/>
+    </linearGradient>
+  </defs>
+
+  <rect width='600' height='400' fill='url(%23bg)'/>
+
+  <!-- chai -->
+  <g transform='translate(230,70)'>
+    <rect x='40' y='0' width='120' height='36' rx='10' fill='url(%23cap)'/>
+    <rect x='20' y='30' width='160' height='220' rx='22' fill='url(%23bottle)' stroke='%23F2D07A'/>
+    <rect x='30' y='56' width='140' height='80' rx='12' fill='white' opacity='.95'/>
+    <text x='100' y='106' text-anchor='middle' font-family='Arial' font-size='18' fill='%23647'>OMEGA-3</text>
+    <text x='100' y='128' text-anchor='middle' font-family='Arial' font-size='12' fill='%23777'>Fish Oil</text>
+
+    <!-- viên capsule -->
+    <ellipse cx='70' cy='182' rx='18' ry='10' fill='%23FFC54D' opacity='.9'/>
+    <ellipse cx='130' cy='192' rx='18' ry='10' fill='%23FFC54D' opacity='.7'/>
+  </g>
+
+  <text x='300' y='360' text-anchor='middle' font-family='Arial' font-size='20' fill='%23333' font-weight='700'>
+    Omega-3 Fish Oil
+  </text>
+</svg>"
+            />
+
+            <span class="badge">Giảm 15%</span>
+          </div>
+          <div class="body">
+            <h4 class="name">Omega-3 Fish Oil</h4>
+            <div class="prices">
+              <strong class="price">149.000₫</strong
+              ><span class="old">199.000₫</span>
+            </div>
+            <a class="btn primary" href="#">Chọn sản phẩm</a>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card product">
+          <div class="thumb">
+            <!-- Card 3 -->
+            <img
+              alt="Máy đo huyết áp bắp tay"
+              src="data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'>
+  <defs>
+    <linearGradient id='bg' x1='0' x2='1'>
+      <stop stop-color='%23EAFBFA'/><stop offset='1' stop-color='%23E6F5F4'/>
+    </linearGradient>
+  </defs>
+
+  <rect width='600' height='400' fill='url(%23bg)'/>
+
+  <!-- thân máy -->
+  <g transform='translate(170,90)'>
+    <rect x='0' y='0' width='220' height='160' rx='22' fill='white' stroke='%2300A6A0' stroke-width='2'/>
+    <rect x='20' y='20' width='180' height='40' rx='10' fill='%2300A6A0' opacity='.15'/>
+    <circle cx='110' cy='100' r='34' fill='%2300A6A0' opacity='.85'/>
+    <text x='110' y='106' text-anchor='middle' font-family='Arial' font-size='18' fill='white' font-weight='700'>120/80</text>
+  </g>
+
+  <!-- vòng bít -->
+  <rect x='360' y='120' width='80' height='120' rx='16' fill='%2399D6D3' opacity='.6'/>
+  <rect x='352' y='130' width='96' height='12' rx='6' fill='%2300A6A0' opacity='.35'/>
+
+  <text x='300' y='360' text-anchor='middle' font-family='Arial' font-size='20' fill='%23333' font-weight='700'>
+    Máy đo huyết áp bắp tay
+  </text>
+</svg>"
+            />
+
+            <span class="badge">Bán chạy</span>
+          </div>
+          <div class="body">
+            <h4 class="name">Máy đo huyết áp</h4>
+            <div class="prices">
+              <strong class="price">649.000₫</strong
+              ><span class="old">799.000₫</span>
+            </div>
+            <a class="btn primary" href="#">Chọn sản phẩm</a>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card product">
+          <div class="thumb">
+            <img
+              alt="Kẽm Gluconate 15mg"
+              src="data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'>
+  <defs>
+    <linearGradient id='d' x1='0' x2='1'><stop stop-color='%23F3F0FF'/><stop offset='1' stop-color='%23E7E3FF'/></linearGradient>
+  </defs>
+  <rect width='600' height='400' fill='url(%23d)'/>
+  <g transform='translate(130,100)'>
+    <rect width='180' height='160' rx='20' fill='white' stroke='%238F8CF9'/>
+    <rect x='24' y='32' width='132' height='16' rx='6' fill='%238F8CF9' opacity='0.3'/>
+    <rect x='24' y='56' width='132' height='12' rx='6' fill='%23EEE9FF'/>
+  </g>
+  <text x='300' y='360' text-anchor='middle' font-family='Arial' fill='%2364738b' font-size='22'>Kẽm Gluconate 15mg</text>
+</svg>"
+            />
+          </div>
+          <div class="body">
+            <h4 class="name">Kẽm Gluconate 15mg</h4>
+            <div class="prices">
+              <strong class="price">89.000₫</strong
+              ><span class="old">119.000₫</span>
+            </div>
+            <a class="btn primary" href="#">Chọn sản phẩm</a>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card product">
+          <div class="thumb">
+            <img
+              alt="Kem chống nắng SPF50+"
+              src="data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'>
+  <defs>
+    <linearGradient id='e' x1='0' x2='1'><stop stop-color='%23FFE9EC'/><stop offset='1' stop-color='%23FFDDE3'/></linearGradient>
+  </defs>
+  <rect width='600' height='400' fill='url(%23e)'/>
+  <g transform='translate(120,110)'>
+    <rect width='170' height='170' rx='22' fill='white' stroke='%23FF8A80'/>
+    <circle cx='85' cy='65' r='32' fill='%23FF8A80' opacity='0.85'/>
+    <rect x='35' y='118' width='100' height='12' rx='6' fill='%23FFE5E8'/>
+  </g>
+  <text x='300' y='360' text-anchor='middle' font-family='Arial' fill='%2364738b' font-size='22'>Kem chống nắng SPF50+</text>
+</svg>"
+            />
+          </div>
+          <div class="body">
+            <h4 class="name">Kem chống nắng SPF50+</h4>
+            <div class="prices">
+              <strong class="price">169.000₫</strong
+              ><span class="old">219.000₫</span>
+            </div>
+            <a class="btn primary" href="#">Chọn sản phẩm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="container section">
+      <div class="head">
+        <h3>Góc sức khỏe</h3>
+        <a href="bai-viet.html">Xem tất cả ›</a>
+      </div>
+      <div class="blog-grid">
+        <article class="post">
+          <div class="thumb">
+            <img
+              alt="Thiếu vitamin D"
+              src="data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'>
+      <defs>
+        <linearGradient id='p1' x1='0' x2='1'><stop stop-color='%23EAF2FF'/><stop offset='1' stop-color='%23F5F9FF'/></linearGradient>
+      </defs>
+      <rect width='640' height='360' rx='16' fill='url(%23p1)'/>
+      <circle cx='520' cy='100' r='70' fill='%23FFCC80' opacity='0.4'/>
+      <text x='40' y='210' font-family='Arial' font-size='34' fill='%23333' font-weight='700'>Thiếu vitamin D?</text>
+      <text x='40' y='250' font-family='Arial' font-size='18' fill='%23666'>Dấu hiệu & cách bổ sung an toàn</text>
+    </svg>"
+            />
+          </div>
+
+          <div class="body">
+            <span class="meta">Dinh dưỡng</span>
+            <h4>5 dấu hiệu thiếu vitamin D</h4>
+            <p>Cách bổ sung an toàn…</p>
+          </div>
+        </article>
+        <article class="post">
+          <div class="thumb">
+            <img
+              alt="Chọn máy đo huyết áp"
+              src="data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'>
+      <defs>
+        <linearGradient id='p2' x1='0' x2='1'><stop stop-color='%23E6FBF8'/><stop offset='1' stop-color='%23E6F5FF'/></linearGradient>
+      </defs>
+      <rect width='640' height='360' rx='16' fill='url(%23p2)'/>
+      <rect x='360' y='90' width='200' height='140' rx='18' fill='white' stroke='%2300A6A0'/>
+      <circle cx='460' cy='160' r='30' fill='%2300A6A0' opacity='0.8'/>
+      <text x='40' y='215' font-family='Arial' font-size='30' fill='%23333' font-weight='700'>Chọn máy đo huyết áp</text>
+      <text x='40' y='250' font-family='Arial' font-size='18' fill='%23666'>Bắp tay hay cổ tay?</text>
+    </svg>"
+            />
+          </div>
+
+          <div class="body">
+            <span class="meta">Thiết bị y tế</span>
+            <h4>Chọn máy đo huyết áp</h4>
+            <p>Bắp tay hay cổ tay?</p>
+          </div>
+        </article>
+        <article class="post">
+          <div class="thumb">
+            <img
+              alt="Routine tối giản"
+              src="data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'>
+      <defs>
+        <linearGradient id='p3' x1='0' x2='1'><stop stop-color='%23F4E8FF'/><stop offset='1' stop-color='%23F9F1FF'/></linearGradient>
+      </defs>
+      <rect width='640' height='360' rx='16' fill='url(%23p3)'/>
+      <rect x='420' y='110' width='160' height='120' rx='22' fill='white' stroke='%238F8CF9'/>
+      <text x='40' y='210' font-family='Arial' font-size='30' fill='%23333' font-weight='700'>Routine tối giản</text>
+      <text x='40' y='246' font-family='Arial' font-size='18' fill='%23666'>3 bước cơ bản mỗi ngày…</text>
+    </svg>"
+            />
+          </div>
+
+          <div class="body">
+            <span class="meta">Làm đẹp</span>
+            <h4>Routine tối giản</h4>
+            <p>3 bước cơ bản mỗi ngày…</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container f-bottom">
+        <div>© 2025 PharmaCity (Demo)</div>
+      </div>
+    </footer>
   </body>
 </html>
